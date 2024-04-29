@@ -8,7 +8,10 @@ function sutitZinu()
     zinas.innerHTML = zinas.innerHTML+'<br>'+zina.value;
 
 }
-function ieladetChatZinu()
+async function ieladetChatZinu()
 {
-
-}let datiNoServera= await fetch();
+    let datiNoServera = await fetch('chatazinas.txt');
+    let dati = await datiNoServera.text;
+    //console.log(dati);
+    zinas.innerHTML = dati;
+}
